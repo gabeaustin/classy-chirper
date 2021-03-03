@@ -32,7 +32,9 @@ class App extends React.Component {
         this.setState({ 
             message: "", 
             author: "",
-            listOfChirps: [...this.state.listOfChirps, { id: uuidv4(), message: this.state.message }] 
+            listOfChirps: [...this.state.listOfChirps, { id: uuidv4(), 
+                                                        message: this.state.message,
+                                                        author: this.state.author  }] 
         });
     }
 
@@ -52,6 +54,16 @@ class App extends React.Component {
                                 className="form-control"
                                 placeholder="What would you like to chirp?"    
                             />
+
+                            <label>Author: </label>
+                            <input 
+                                value={this.state.author} 
+                                onChange={event => this.setState({ author: event.target.value })} 
+                                className="form-control"
+                                placeholder="Who wrote this chirp?"    
+                            />
+
+
                             <button onClick={event => this.handleSubmit(event)} className="btn btn-primary mt-3">
                                 Post this Chirp
                             </button>

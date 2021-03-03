@@ -5,6 +5,7 @@ const ChirperItem = (props) => {
         <div>
             <li className="list-group-item">
                 {props.chirper.message}
+                {props.chirper.author}
             </li>
         </div>
     );

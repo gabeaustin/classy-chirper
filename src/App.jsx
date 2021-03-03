@@ -61,10 +61,10 @@ class App extends React.Component {
                 <section className="row justify-content-center mt-3">
                     <div className="col-md-6">
                         <ul className="list-group">
-                            {this.state.listOfChirps.map(listOfChirps => (
-                                // <li className="list-group-item" key={`todo-task-${todo.id}`}>{todo.task}</li>
-                                <li className="list-group-item" key={`listOfChirps-message-${listOfChirps.id}`}>{listOfChirps.message}</li>
-                                // <ChirperItem key={`listOfChirps-message-${listOfChirps.id}`} message={message} />
+                            {this.state.listOfChirps.map(listOfChirp => (
+                                <ChirperItem key={`listOfChirp-message-${listOfChirp.id}`} listOfChirp={listOfChirp}  />
+                                // <TodoItem key={`todo-task-${todo.id}`} todo={todo} />
+                                // message={message}
                             ))}
                         </ul>
                     </div>
